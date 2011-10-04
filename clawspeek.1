@@ -1,0 +1,20 @@
+.TH clawspeek 1 "2011-10-01" "" ""
+.SH "NAME"
+clawspeek \- mimimalistic Claws Mail password recovery
+.SH "SYNOPSIS"
+clawspeek <obfuscated_password>
+.SH "DESCRIPTION"
+clawspeek receives an obfuscated password argument (as found in Claws
+Mail's accountrc file) and outputs it and the default unobfuscated
+equivalent on the standard output.
+.PP
+The 'default unobfuscated equivalent' means that only Claws Mail default
+obfuscation key is used. In the unlikely case that your software
+distributor had changed such key this utility won't work for you, sorry.
+.SH "OPTIONS"
+Not required.
+.SH "LIMITATIONS"
+Only recovers one password per run.
+Only default obfuscation key is supported.
+.SH "SEE ALSO"
+claws-mail(1).

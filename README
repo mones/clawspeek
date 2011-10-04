@@ -1,0 +1,42 @@
+
+Minimalistic Claws Mail password recovery utility
+-------------------------------------------------
+
+Sometimes you forgot the password of one of your Claws Mail accounts,
+but you have it saved on your accountrc. (Un)fortunately passwords in
+accountrc are obfuscated to prevent immediate reading. This utility
+helps to recover those passwords without resorting to network sniffing
+or debugging the binary.
+
+Notice this program uses the default obfuscation key. In the unlikely
+case that this default key has been changed by your software distributor
+this utility won't work for you.
+
+Requires make, gcc and glib 2.x for building.
+
+Build instructions:
+
+	make
+
+If everything goes well the clawspeek binary will be created.
+
+Installation:
+
+	make install
+
+Default installation prefix is '/usr/local', you may need to gain root
+privileges before installing. You can change location using the PREFIX
+variable. Also, DESTDIR variable can be used to specify a different
+destination directory (this will be prepended to prefix):
+
+	make install PREFIX=/usr DESTDIR=$HOME/build
+
+Would install binary under $HOME/build/usr/bin, instead of /usr/local/bin.
+
+Removal of previous installation:
+
+	make uninstall
+
+With the same PREFIX and DESTDIR used for installation and the same root
+privileges (if required).
+
