@@ -1,0 +1,69 @@
+=encoding utf-8
+
+=pod
+
+=head1 NAME
+
+clawspeek - mimimalistic Claws Mail password recovery
+
+=head1 SYNOPSIS
+
+clawspeek <obfuscated_password>
+
+=head1 DESCRIPTION
+
+clawspeek receives an obfuscated password argument (as found in Claws Mail's 
+accountrc file) and outputs it and the default unobfuscated equivalent on the
+standard output.
+
+The 'default unobfuscated equivalent' means that only Claws Mail default
+obfuscation key is used. In the unlikely case that your software distributor
+had changed such key this utility won't work for you, sorry.
+
+=head1 OPTIONS
+
+Not required. A single argument is mandatory.
+
+=head1 USAGE
+
+Some shells (B<bash(1)> for example) use ‘!’ as history expansion character.
+That character is common in obfuscated password, so you must escape if from
+shell. Enclosing the obfuscated password in single quotes is one simple way.
+
+=head1 EXIT STATUS
+
+=over 2
+
+=item 0
+
+On success.
+
+=item -1
+
+If no arguments were supplied.
+
+=back
+
+=head1 LIMITATIONS
+
+=over 2
+
+=item Only recovers one password per run.
+
+=item Only default obfuscation key is supported.
+
+=back
+
+=head1 BUGS
+
+No known bugs yet.
+
+Please, use GitHub issues list for bug reporting:
+L<https://github.com/mones/clawspeek/issues>
+
+=head1 SEE ALSO
+
+claws-mail(1), bash(1).
+
+=cut
+
