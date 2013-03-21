@@ -1,6 +1,6 @@
 /*
  * Clawspeek -- minimalistic Claws Mail password recovery utility
- * Copyright (C) 2011 Ricardo Mones and the Claws Mail team
+ * Copyright (C) 2011-2013 Ricardo Mones and the Claws Mail team
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
