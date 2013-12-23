@@ -12,7 +12,7 @@ MAN1DIR = ${MANDIR}/man1
 
 CC = gcc
 POD = pod2man
-CFLAGS = $(shell pkg-config --cflags glib-2.0) 
+CFLAGS += $(shell pkg-config --cflags glib-2.0) 
 LIBS = $(shell pkg-config --libs glib-2.0)
 PCKF = passcrypt
 PCK = $(shell echo 'A2DD<6J_' | tr '\!-~' 'P-~\!-O')
