@@ -18,18 +18,21 @@
 
 #include <string.h>
 #include <glib.h>
+#include "base64.h"
 #include "passcrypt.h"
 
 int main(int argc, char*argv[])
 {
 	gchar *buf;
 	gint  len;
+	size_t alen;
 
 	if (argc < 2) {
 		return -1;
 	}
-	buf = g_strnfill(1024, '\0');
-	len = base64_decode(buf, &argv[1][1], strlen(argv[1]) - 1);
+	alen = strlen(argv[1]);
+	buf = g_strnfill((gint) alen, '\0');
+	len = base64_decode((guchar *) buf, &argv[1][1], (gint) alen - 1);
 	passcrypt_decrypt(buf, len);
 	g_print("%s -> %s\n", argv[1], buf);
 	g_free(buf);
