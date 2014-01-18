@@ -30,8 +30,8 @@ Find the line beginning with "password=". Your password is here, in an encrypted
 
 Then launch the following command in a terminal:
 
-/usr/local/bin/clawspeek 'encrypted-password'
-(don't forget the apostrophes)
+/usr/local/bin/clawspeek '!encrypted-password='
+(Of course, replace 'encrypted-password' by the one you found above. Copy and paste the whole password, including the signs ! and =, and don't forget the apostrophes around.)
 
 You're done, here is your precious password!
 
