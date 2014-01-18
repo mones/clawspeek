@@ -12,6 +12,7 @@ case that this default key has been changed by your software distributor
 this utility won't work for you.
 
 Requires make, gcc and glib 2.x for building.
+(On a Debian Squeeze, install libglib2.0-dev instead of glib)
 
 Build instructions:
 
