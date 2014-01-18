@@ -1,4 +1,3 @@
-
 Minimalistic Claws Mail password recovery utility
 -------------------------------------------------
 
@@ -23,6 +22,21 @@ If everything goes well the clawspeek binary will be created.
 Installation:
 
 	make install
+	
+Open now the accountrc file in your .claws-mail folder
+
+Find the line beginning with "password=". Your password is here, in an encrypted form.
+
+Then launch the following command in a terminal:
+
+/usr/local/bin/clawspeek 'encrypted-password'
+(don't forget the apostrophes)
+
+You're done, here is your precious password!
+
+
+
+More informations about installation:
 
 Default installation prefix is '/usr/local', you may need to gain root
 privileges before installing. You can change location using the PREFIX
