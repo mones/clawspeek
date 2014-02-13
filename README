@@ -40,3 +40,24 @@ Removal of previous installation:
 With the same PREFIX and DESTDIR used for installation and the same root
 privileges (if required).
 
+Usage:
+
+The build process generages a standard manpage which contains additional
+information and other details. After installation, it can be viewed with:
+
+	man clawspeek
+
+Note that you may need to update man database before that (see mandb
+manual page).
+
+If you installed the program to a non-standard location and the above
+command doesn't work (not even after updating the man database) you can
+also view the generated manpage in the source directory:
+
+	man -l clawspeek.1
+
+As a last resource you can read the manpage directly on github, which
+will nicely format the pod for you, point your browser to:
+
+	http://github.com/mones/clawspeek/blob/master/clawspeek.pod
+
