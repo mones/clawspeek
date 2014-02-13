@@ -1,4 +1,3 @@
-
 Minimalistic Claws Mail password recovery utility
 -------------------------------------------------
 
@@ -13,6 +12,7 @@ case that this default key has been changed by your software distributor
 this utility won't work for you.
 
 Requires make, gcc and glib 2.x for building.
+(On a Debian Squeeze, install libglib2.0-dev instead of glib)
 
 Build instructions:
 
@@ -23,6 +23,21 @@ If everything goes well the clawspeek binary will be created.
 Installation:
 
 	make install
+	
+Open now the accountrc file in your .claws-mail folder
+
+Find the line beginning with "password=". Your password is here, in an encrypted form.
+
+Then launch the following command in a terminal:
+
+/usr/local/bin/clawspeek '!encrypted-password='
+(Of course, replace 'encrypted-password' by the one you found above. Copy and paste the whole password, including the signs ! and =, and don't forget the apostrophes around.)
+
+You're done, here is your precious password!
+
+
+
+More informations about installation:
 
 Default installation prefix is '/usr/local', you may need to gain root
 privileges before installing. You can change location using the PREFIX
