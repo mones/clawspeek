@@ -30,6 +30,32 @@ Some shells (B<bash(1)> for example) use ‘!’ as history expansion character.
 That character is common in obfuscated password, so you must escape if from
 shell. Enclosing the obfuscated password in single quotes is one simple way.
 
+=head1 EXAMPLES
+
+Let's say you have an account named "Test" in Claws Mail, and want to recover
+the receiving password.
+
+=over 2
+
+=item Open your B<~/.claws-mail/accountrc> with an editor or pager
+
+=item Search for a line with that account name: ‘account_name=Test’
+
+=item Search below for the first line starting with ‘password=’, it
+reads: ‘password=!Wffj/kf9h1M=’
+
+=back
+
+Then issue the command (notice the single quotes):
+
+ $ claswpeek '!Wffj/kf9h1M='
+ !Wffj/kf9h1M= -> passw0rd
+
+You're done, your password was “passw0rd”.
+
+In case of the sending password, after locating the account name,
+look for the first line starting with ‘smtp_password=’ instead.
+
 =head1 EXIT STATUS
 
 =over 2
@@ -56,7 +82,12 @@ If no arguments were supplied.
 
 =head1 BUGS
 
-No known bugs yet.
+One user has mentioned problems with output which may be related to passwords
+encoded with some invalid UTF-8 character. No further cooperation other than
+this was given, so if you have similar problems open an issue.
+
+Since decryption code is the same as Claws Mail itself, this bug applies:
+L<http://www.thewildbeast.co.uk/claws-mail/bugzilla/show_bug.cgi?id=2428>
 
 Please, use GitHub issues list for bug reporting:
 L<https://github.com/mones/clawspeek/issues>
