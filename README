@@ -12,6 +12,15 @@ Notice this program uses the default obfuscation key. In the unlikely
 case that this default key has been changed by your software distributor
 this utility won't work for you.
 
+Notice also that since Claws Mail 3.14.0 release there's a new password
+storage mechanism which uses a different file, a PBKDF2 based encryption
+and a master password. If you have set a master password and you have
+forgotten it this utility can't help you. If you have not set a master
+password and the password you have forgotten has not been changed since
+the pre-3.14.0 version, then you can find the password in the file
+passwordstorerc (though you need also to know the account id number from
+accountrc to find it because passwordstorerc doesn't use account names).
+
 Requires make, gcc and glib 2.x for building.
 
 Build instructions:
