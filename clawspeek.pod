@@ -78,6 +78,10 @@ If no arguments were supplied.
 
 =item Only default obfuscation key is supported.
 
+=item Only Claws Mail versions below 3.14.0 are fully supported.
+Limited support for greater versions: when not using the new master
+password mechanism, see README for details.
+
 =back
 
 =head1 BUGS
